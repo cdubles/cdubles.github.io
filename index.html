@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cody Schafer, Software Engineer</title>
+<meta name="description" content="Cody Schafer is a software engineer who builds AI pipelines, workflow automation, and cloud backends. Open to new roles.">
+<link rel="canonical" href="https://codyschafer.dev/">
+<meta name="theme-color" content="#141414">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141414'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='%23FF4D1F'%3ECS%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codyschafer.dev/">
+<meta property="og:title" content="Cody Schafer, Software Engineer">
+<meta property="og:description" content="I build systems that automate slow, manual work. AI pipelines, workflow automation, and cloud backends. Open to new roles.">
+<meta property="og:image" content="https://codyschafer.dev/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Cody Schafer",
+  "jobTitle": "Software Engineer",
+  "url": "https://codyschafer.dev/",
+  "email": "mailto:cody.m.schafer@gmail.com",
+  "sameAs": [
+    "https://github.com/cdubles",
+    "https://www.linkedin.com/in/cody-m-schafer"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Miami University"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cleveland",
+    "addressRegion": "OH",
+    "addressCountry": "US"
+  },
+  "knowsAbout": ["Python", "FastAPI", "React", "PostgreSQL", "LangChain", "RAG", "N8N", "Salesforce", "AWS"]
+}
+</script>
+<style>
+  :root {
+    --ink: #141414;
+    --paper: #ECECE7;
+    --paper-2: #E1E1DA;
+    --signal: #FF4D1F;
+    --blue: #1E3F6B;
+    --blue-2: #162F52;
+    --white: #FFFFFF;
+    --text: #141414;
+    --muted: #5B5B57;
+    --display: "Syne", system-ui, sans-serif;
+    --body: "DM Sans", system-ui, sans-serif;
+    --gutter: clamp(16px, 5vw, 72px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --paper: #1A1A18; --paper-2: #242422; --text: #ECECE7; --muted: #A7A7A0; }
+  }
+  :root[data-theme="dark"] { --paper: #1A1A18; --paper-2: #242422; --text: #ECECE7; --muted: #A7A7A0; }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--paper); color: var(--text);
+    font: 400 1.0625rem/1.55 var(--body); -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--signal); outline-offset: 4px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; letter-spacing: -0.03em; margin: 0; line-height: 0.95; }
+  .wrap { padding-left: var(--gutter); padding-right: var(--gutter); max-width: 1100px; margin: 0 auto; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* Nav */
+  .nav { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--paper-2); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font: 800 1.125rem var(--display); text-decoration: none; letter-spacing: -0.02em; }
+  .brand span { color: var(--signal); }
+  .nav ul { display: flex; gap: clamp(14px, 3vw, 28px); list-style: none; margin: 0; padding: 0; align-items: center; }
+  .nav a { text-decoration: none; font-weight: 500; font-size: 0.9375rem; }
+  .nav a:hover { color: var(--signal); }
+  .nav .cta { background: var(--ink); color: #fff; padding: 8px 16px; border-radius: 999px; font-weight: 600; }
+  .nav .cta:hover { background: var(--signal); color: #fff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .nav .cta { background: #ECECE7; color: #141414; } }
+  :root[data-theme="dark"] .nav .cta { background: #ECECE7; color: #141414; }
+  @media (max-width: 600px) { .nav .hide-sm { display: none; } }
+
+  /* Hero */
+  .hero { padding: clamp(48px, 8vw, 104px) 0 clamp(56px, 8vw, 96px); }
+  .hero h1 {
+    font-size: clamp(2.25rem, 5.6vw, 4.5rem);
+    max-width: 20ch;
+  }
+  .hero h1 em { font-style: normal; color: var(--signal); }
+  .hero .row { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: clamp(24px, 3vw, 36px); }
+  .hero p { margin: 0; font-size: clamp(1.125rem, 1.8vw, 1.375rem); max-width: 36ch; }
+  .hero .who { font-weight: 600; }
+  .hero .status { font-size: 1rem; color: var(--muted); display: flex; gap: 10px; align-items: flex-start; max-width: none; }
+  .hero .status::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--signal); flex: none; margin-top: 0.45em; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero h1 .line { display: inline-block; opacity: 0; transform: translateY(0.35em); animation: rise .7s cubic-bezier(.2,.8,.2,1) forwards; }
+    .hero h1 .line:nth-child(2) { animation-delay: .1s; }
+    .hero h1 .line:nth-child(3) { animation-delay: .2s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+  }
+  .hero h1 .line { display: block; }
+
+  /* Section blocks */
+  section.block { padding: clamp(64px, 9vw, 120px) 0; scroll-margin-top: 60px; }
+  .block h2 { font-size: clamp(2rem, 4.2vw, 3.25rem); max-width: 14ch; }
+  .block .sub { margin: 14px 0 0; font-size: 1.0625rem; max-width: 46ch; }
+  .dark { background: var(--ink); color: #ECECE7; --muted: #A7A7A0; }
+  .blueb { background: var(--blue); color: #F2F6FA; --muted: #B8CBE3; }
+  .orange { background: var(--signal); color: #141414; --muted: #4A1A0C; }
+
+  /* Experience */
+  .jobs { list-style: none; margin: clamp(36px, 5vw, 64px) 0 0; padding: 0; }
+  .job { display: grid; grid-template-columns: 1fr; gap: 10px 40px; padding: 32px 0; border-top: 1px solid #353533; }
+  .job:last-child { border-bottom: 1px solid #353533; }
+  @media (min-width: 800px) { .job { grid-template-columns: 11rem 1fr; } }
+  .job .story { margin: 14px 0 0; max-width: 56ch; font-size: 1.0625rem; color: #D9D9D4; }
+  .job .when { font-weight: 600; color: var(--signal); font-size: 0.9375rem; padding-top: 6px; }
+  .job h3 { font: 800 clamp(1.375rem, 2.4vw, 1.75rem)/1.1 var(--display); letter-spacing: -0.02em; }
+  .job .co { margin: 8px 0 0; color: var(--muted); font-size: 0.9375rem; }
+
+  /* Projects */
+  .feat { margin-top: clamp(36px, 5vw, 64px); display: grid; grid-template-columns: 1fr; gap: 32px; padding-top: 32px; border-top: 1px solid var(--blue-2); max-width: 56rem; }
+  .feat h3 { font-size: clamp(2rem, 4.2vw, 3.25rem); }
+  .feat .kick { margin: 0 0 12px; color: var(--muted); font-size: 0.9375rem; }
+  .feat p.d { margin: 20px 0 0; font-size: 1.125rem; max-width: 46ch; }
+  .mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 32px; margin: 0; padding: 0; list-style: none; max-width: 52rem; }
+  .mini li b { display: block; font: 800 clamp(1.75rem, 3.4vw, 2.75rem)/1 var(--display); letter-spacing: -0.03em; color: #fff; }
+  .mini li span { display: block; margin-top: 6px; font-size: 0.875rem; color: var(--muted); }
+  @media (max-width: 600px) {
+    .mini { grid-template-columns: 1fr; gap: 0; border-top: 1px solid rgba(255,255,255,.18); }
+    .mini li { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+    .mini li b { font-size: 2rem; }
+    .mini li span { margin-top: 4px; }
+  }
+  .feat dl { margin: 28px 0 0; }
+  .feat dt { font-weight: 600; }
+  .feat dd { margin: 4px 0 0; color: var(--muted); }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .tags li { font-size: 0.8125rem; font-weight: 600; padding: 5px 11px; border-radius: 999px; border: 1px solid currentColor; opacity: .9; }
+
+  .second { margin-top: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 900px) { .second { grid-template-columns: 1fr 1fr; } }
+  .card { background: var(--blue-2); border-radius: 20px; padding: clamp(22px, 3vw, 32px); display: flex; flex-direction: column; }
+  .card h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+  .card h3 .wip { display: inline-block; vertical-align: 0.35em; margin-left: 10px; background: var(--signal); color: #141414; font: 600 0.6875rem/1 var(--body); padding: 5px 9px; border-radius: 999px; letter-spacing: 0; white-space: nowrap; }
+  @media (max-width: 600px) {
+    .card h3 .wip { display: block; width: fit-content; margin: 12px 0 0; vertical-align: 0; }
+  }
+  .card p { margin: 14px 0 0; max-width: 50ch; }
+  .card .go { margin-top: auto; padding-top: 20px; font-weight: 600; }
+  .repos { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .repos li { padding: 14px 0; border-top: 1px solid rgba(255,255,255,.18); display: flex; justify-content: space-between; align-items: baseline; gap: 4px 16px; flex-wrap: wrap; }
+  .repos li:first-child { border-top: 0; padding-top: 0; }
+  .repos a { font-weight: 600; }
+  .repos span { color: var(--muted); font-size: 0.9375rem; text-align: right; }
+  @media (max-width: 600px) {
+    .repos li { flex-direction: column; align-items: flex-start; }
+    .repos span { text-align: left; }
+  }
+
+  /* Skills */
+  .skills { margin-top: clamp(36px, 5vw, 64px); border-top: 2px solid var(--text); }
+  .skill { display: grid; grid-template-columns: 1fr; gap: 6px 48px; padding: 28px 0; border-bottom: 1px solid var(--paper-2); }
+  @media (min-width: 800px) { .skill { grid-template-columns: 13rem 1fr; align-items: baseline; } }
+  .skill .items { max-width: 52ch; }
+  .skill h3 { font-size: clamp(1.125rem, 1.6vw, 1.375rem); line-height: 1.1; letter-spacing: -0.02em; padding-right: 8px; }
+  .skill .items { margin: 0; font-size: 1.0625rem; }
+  .skill .used { margin: 6px 0 0; color: var(--muted); font-size: 0.9375rem; }
+  .skill .used b { color: var(--signal); font-weight: 600; }
+  .edu { margin-top: 40px; display: grid; grid-template-columns: 1fr; gap: 6px 48px; }
+  @media (min-width: 800px) { .edu { grid-template-columns: 13rem 1fr; } }
+  .edu .k { color: var(--signal); font-weight: 600; }
+  .edu p { margin: 0; }
+  .edu .m { color: var(--muted); font-size: 0.9375rem; margin-top: 4px; }
+
+  /* Contact */
+  .orange h2 { font-size: clamp(2.5rem, 7vw, 5.5rem); max-width: 10ch; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .btn { text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 999px; border: 2px solid #141414; }
+  .btn.solid { background: #141414; color: #fff; }
+  .btn:hover { background: #fff; color: #141414; border-color: #fff; }
+  .orange p { margin: 18px 0 0; font-size: 1.125rem; max-width: 44ch; }
+
+  footer { background: var(--ink); color: #A7A7A0; font-size: 0.875rem; }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 22px; padding-bottom: 28px; }
+  .toggle { background: none; border: 1px solid #3A3A38; color: #A7A7A0; font: inherit; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+  .toggle:hover { color: #fff; border-color: #fff; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Cody Schafer<span>.</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li class="hide-sm"><a href="#work">Work</a></li>
+        <li class="hide-sm"><a href="#projects">Projects</a></li>
+        <li class="hide-sm"><a href="#skills">Skills</a></li>
+        <li><a class="cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>
+        <span class="line">Slow, manual work,</span>
+        <span class="line"><em>automated.</em></span>
+      </h1>
+      <div class="row">
+        <p class="who">I'm Cody, a software engineer. I build AI pipelines and automation for finance teams, from venture diligence to equipment lending.</p>
+        <p class="status">Open to AI engineering and backend roles. Cleveland or remote.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block dark" id="work">
+    <div class="wrap">
+      <h2>Where I've worked</h2>
+      <p class="sub">Three roles in finance, each one building tools for people who had better things to do than data entry.</p>
+      <ol class="jobs">
+        <li class="job">
+          <div class="when num">Jun to Oct 2026</div>
+          <div>
+            <h3>Software Engineer</h3>
+            <p class="co">Elevex Capital, Westlake, OH.</p>
+            <p class="story">Elevex is a commercial equipment lender modernizing how businesses apply for financing. I was a software engineer on the online application platform and the automation and internal tooling around it.</p>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when num">Sep 2024 to May 2026</div>
+          <div>
+            <h3>Venture Analyst Intern</h3>
+            <p class="co">1809 Capital, Oxford, OH.</p>
+            <p class="story">1809 is an early-stage venture fund in Oxford, Ohio. I worked on the investment team doing research and diligence on prospective deals, and was the firm's internal lead on VentureOS, the AI diligence platform my capstone team built for them.</p>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when num">May to Aug 2025</div>
+          <div>
+            <h3>AI and Automation Intern</h3>
+            <p class="co">Swell VC, remote.</p>
+            <p class="story">Swell is an early-stage venture firm. I interned on the AI and automation side, building tools that helped the team find and evaluate startups worth a conversation.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block blueb" id="projects">
+    <div class="wrap">
+      <h2>Things I've built</h2>
+
+      <article class="feat">
+        <div>
+          <p class="kick">Senior capstone for 1809 Capital, 2025 to 2026</p>
+          <h3>VentureOS</h3>
+          <p class="d">Analysts at 1809 were spending days researching one company. VentureOS reads in a fund's whole portfolio, researches every company with AI grounded in live search, scores each against the firm's criteria, and lets you ask it questions afterward.</p>
+          <ul class="tags" aria-label="Tech used"><li>N8N</li><li>Supabase</li><li>PostgreSQL</li><li>Vector search</li><li>RAG</li><li>LLM APIs</li></ul>
+        </div>
+        <div>
+          <ul class="mini">
+            <li><b class="num">6</b><span>person team I led as product lead</span></li>
+            <li><b class="num">100+</b><span>companies researched and scored</span></li>
+            <li><b>Minutes</b><span>per company, down from days</span></li>
+          </ul>
+          <dl>
+            <dt>My part</dt>
+            <dd>I ran the team and owned the architecture and data model. I was also the one talking to the client, from first requirements to handover.</dd>
+          </dl>
+        </div>
+      </article>
+
+      <div class="second">
+        <div class="card">
+          <h3>ResumeForge <span class="wip">In progress</span></h3>
+          <p>Tailors a resume to a job posting with a chain of Claude calls, then checks its own work so nothing gets invented. FastAPI, PostgreSQL, and a React dashboard to track applications.</p>
+          <ul class="tags" aria-label="Tech used"><li>Claude API</li><li>FastAPI</li><li>PostgreSQL</li><li>React</li></ul>
+          <a class="go" href="#" data-link="resumeforgeRepo">View the code on GitHub</a>
+        </div>
+        <div class="card">
+          <h3>More on GitHub</h3>
+          <ul class="repos" style="margin-top:16px">
+            <li><a href="#" data-repo="Constellation">Constellation</a><span>Git history as a star map. Node, React, d3-force</span></li>
+            <li><a href="#" data-repo="CSE385Final">F1 data dashboard</a><span>JavaScript and SQL</span></li>
+            <li><a href="#" data-repo="RPI-LED-Server">Raspberry Pi LED server</a><span>Web control for hardware</span></li>
+          </ul>
+          <a class="go" href="#" data-link="github">All repositories</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <h2>What I work with</h2>
+      <div class="skills">
+        <div class="skill">
+          <h3>AI and automation</h3>
+          <div>
+          <p class="items">Python, Claude API, Gemini API, LangChain, RAG, vector search, N8N</p>
+          <p class="used"><b>Used in</b> VentureOS, ResumeForge, Elevex document ingestion</p>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Web and data</h3>
+          <div>
+          <p class="items">FastAPI, React, React Native, PostgreSQL, Supabase, AWS, Docker, Git</p>
+          <p class="used"><b>Used in</b> ResumeForge, VentureOS, Elevex</p>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Salesforce</h3>
+          <div>
+          <p class="items">Apex, Lightning Web Components, Salesforce Flow</p>
+          <p class="used"><b>Used in</b> CapVex and Elevex loan operations</p>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Security</h3>
+          <div>
+          <p class="items">Dependency and secret scanning, cloud findings aggregation</p>
+          <p class="used"><b>Used in</b> the Elevex security scanner prototype. A direction I'm growing into, with certifications in progress.</p>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Also</h3>
+          <div>
+          <p class="items">JavaScript, SQL, Java, C++</p>
+          <p class="used"><b>Used in</b> coursework and side projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="edu">
+        <div class="k">Education</div>
+        <div>
+          <p>B.S. Computer Science, Miami University, May 2026</p>
+          <p class="m">President of the ACM chapter, 2025 to 2026. Lilly Leadership Institute, Cohort 12.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block orange" id="contact">
+    <div class="wrap">
+      <h2>Let's talk.</h2>
+      <p>Hiring for AI engineering or backend? I'm in Cleveland and open to remote.</p>
+      <div class="actions">
+        <a class="btn solid" href="#" data-link="email">Email me</a>
+        <a class="btn" href="#" data-link="linkedin">LinkedIn</a>
+        <a class="btn" href="#" data-link="github">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Cody Schafer</span>
+    <button class="toggle" type="button">Toggle theme</button>
+  </div>
+</footer>
+
+<script>
+  const LINKS = {
+    email: "cody.m.schafer@gmail.com",
+    linkedin: "https://www.linkedin.com/in/cody-m-schafer",
+    github: "https://github.com/cdubles",
+    resumeforgeRepo: "https://github.com/cdubles/ResumeForge",
+  };
+
+  document.querySelectorAll("[data-link]").forEach((el) => {
+    const value = LINKS[el.dataset.link];
+    if (!value) return;
+    el.href = el.dataset.link === "email" ? "mailto:" + value : value;
+  });
+  document.querySelectorAll("[data-repo]").forEach((el) => {
+    el.href = LINKS.github.replace(/\/$/, "") + "/" + el.dataset.repo;
+  });
+
+  const root = document.documentElement;
+  try { const saved = localStorage.getItem("theme"); if (saved) root.dataset.theme = saved; } catch (e) {}
+  document.querySelector(".toggle").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  });
+</script>
+</body>
+</html>
